@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* utility classes */
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none !important;
+}
+
+/* root style */
+
+.root {
+  min-height: 100vh;
+}
+
+.root > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 50%;
+}
+
+/* Header style */
+
+.header-text {
+  font-size: 2.5rem;
+}
+
+/* form style */
+
+.btn {
+  color: #494949 !important;
+  background: transparent;
+  padding: 5px 10px;
+  border: 3px solid #494949 !important;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #ffffff !important;
+  background: #f6b93b;
+  border-color: #f6b93b !important;
+  transition: all 0.4s ease 0s;
+}
+
+.inp {
+  position: relative;
+  margin: 0 10px;
+  width: 100%;
+  max-width: 280px;
+}
+.inp .label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.inp .border {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #f6b93b;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.inp input {
+  -webkit-appearance: none;
+  border: 0;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+  border-bottom: 2px solid #8d94a1;
+}
+.inp input:hover {
+  background: rgba(34, 50, 84, 0.03);
+}
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-16px) scale(0.75);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  color: #07f;
+  transform: translateY(-16px) scale(0.75);
+}
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+/* resaults style */
+
+.Clear {
+  position: relative;
+}
+
+.Clear::after {
+  content: "";
+  position: absolute;
+  background-image: url("./images/sunny.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Clouds {
+  position: relative;
+}
+
+.Clouds::after {
+  content: "";
+  position: absolute;
+  background-image: url("./images/clouds.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Rain {
+  position: relative;
+}
+
+.Rain::after {
+  content: "";
+  position: absolute;
+  background-image: url("./images/rain.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Haze {
+  position: relative;
+}
+
+.Haze::after {
+  content: "";
+  position: absolute;
+  background-image: url("./images/haze.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Style for reasults */
+
+.resaults {
+  width: 75%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px 0 0 0;
+}
+
+.resaults header {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.date-today {
+  grid-column: 1/-1;
+}
+
+.resaults-today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resaults-today h1 {
+  padding: 0 0 0 15px;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.resaults img {
+  height: 75px;
+  width: 75px;
+}
